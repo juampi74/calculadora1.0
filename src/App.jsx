@@ -11,7 +11,7 @@ function App() {
 
   const agregarInput = (valor) => {
     let mostrar = "";
-    if (input == "Syntax Error" || input == "Math Error") {
+    if (input === "Syntax Error" || input === "Math Error") {
       mostrar = "";
     } else {
       mostrar = input;
@@ -23,7 +23,7 @@ function App() {
     if (input) {
       try {
         let resultado = evaluate(input);
-        if (resultado == "Infinity" || resultado.toString() == "NaN") {
+        if (resultado === "Infinity" || resultado.toString() === "NaN") {
           resultado = "Math Error";
         }
         setInput(resultado);
